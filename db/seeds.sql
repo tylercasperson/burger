@@ -1,5 +1,9 @@
-USE burgers_db;
+USE burgerDB;
 INSERT INTO burgers (burger_name, devoured)
-VALUE ("Luger Burger", false)
-VALUE ("Le Pigeon Burger", false)
-VALUE ("Double Animal Inside", false)
+VALUES ("Luger Burger", false);
+
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Le Pigeon Burger", false)
+
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Double Animal Inside", false)

@@ -1,4 +1,4 @@
-var orm = require("./config/orm.js");
+var orm = require("../config/orm.js");
 
 var hamburger = {
     all: function(cb) {
@@ -23,4 +23,4 @@ var hamburger = {
     }
 };
 
-module.exports = cat;
+module.exports = burgers;

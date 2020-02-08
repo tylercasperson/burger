@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS greatBay_DB;
-CREATE Database burgers_db;
-USE burgers_db;
+DROP DATABASE IF EXISTS burgerDB;
+CREATE Database burgerDB;
+USE burgerDB;
 CREATE TABLE burgers (
     id int AUTO_INCREMENT,
     burger_name varchar(255) NOT NULL,
