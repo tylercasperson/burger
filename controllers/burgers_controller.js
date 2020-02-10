@@ -1,11 +1,10 @@
 var express = require("express");
-
-var hamburger = require("../modles/burger.js");
-
 var router = express.Router();
+var burgers = require("../models/burger.js");
 
 router.get("/", function(req, res) {
-    burgers.all(function(data) {
+    // res.render("index", data);
+    burgers.selectAll(function(data) {
         var hbsObject = {
             burgers: data
         };
