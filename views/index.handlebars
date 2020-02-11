@@ -3,27 +3,41 @@
         <div class="offset-md-4 col-md-4">
             <br>
             <h1>Eat da Burger</h1>
-            <img src="../../public/assets/img/burger.png" alt="burger">
+            <img src="/public/assets/img/burger.png" alt="burger">
         </div>
     </div>
 </div>
 <br>
 <br>
+
+{{!-- Delivered burgers --}}
 <div class="container">
     <div class="row">
+        <form action="/api/burgers/{{this.id}}" method="PUT">
         <div>
             {{#each burgers}}
-                 <div>{{this.burger_name}}  - <button>Eat it</button></div>
+                {{#unless devoured}}
+                    <div>{{this.burger_name}}  - <button data_id="{{this.id}}">Eat it</button></div>
+                {{/unless}}
             {{/each}}
         </div>
-        <div class="offset-md-1 col-md-3">
-            <textarea cols="40" rows="3"></textarea>  
+        </form>
+
+{{!-- Requested burger --}}
+        <form action="/api/burgers" method="POST">
+        <div class="offset-md-2 col-md-3">
+            <textarea id-="burgerName" name="burger_name" cols="20" rows="3"></textarea>  
             <br>
-            <button>Add burger</button>
+            <button type="submit" class="addBurger">Add burger</button>
         </div>
+        </form>
+
+{{!-- devoured burgers --}}
         <div class="offset-md-2 col-md-3">
             {{#each burgers}}
-                <div>{{this.burger_name}}</div>
+                {{#if devoured}}
+                    <div text-decoration="line-through">{{this.burger_name}}</div>
+                {{/if}}
             {{/each}}
         </div>
     </div>
