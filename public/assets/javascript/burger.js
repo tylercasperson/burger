@@ -1,10 +1,11 @@
 $(function(){
 
-    $(".eat").on("click", function(){
+    $(".eat").on("click", function(event){
+        event.preventDefault();
     var id = $(this).data("id");
     console.log("tyler");
 
-        $.ajax("/api/burgers/" + id, {
+        $.ajax("/burgers/" + id, {
             type: "PUT",
             data: true
         }).then(function(){
@@ -13,9 +14,9 @@ $(function(){
         });
     });
 
-    $(".submit").on("click", function(){
+    $(".submit").on("click", function(event){
+        event.preventDefault();
         var name = $("#burgerName").text();
-
         $.ajax("/api/burgers", {
             type: "POST",
             data: addBurger

@@ -14,13 +14,18 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res){
     burgers.insertOne(req.body.burger_name, function(data) {
-        res.json(data);
+        res.redirect("/");
     });
 });
 
-router.put("/api/burgers/:id", function(req, res){
-    burgers.updateOne(req.params.id, function(data) {
-        res.json(data);
+router.put("/burgers/:id", function(request, res){
+    // var id = request.params.id;
+    // console.log(request);
+    var condition = "id = " + request.params.id;
+    burgers.updateOne(condition, function(result) {
+        // res.json(data);
+        console.log(result);
+        res.sendStatus(200);
     });
 });
 
