@@ -9,7 +9,7 @@
 </div>
 <br>
 <br>
-
+   
 {{!-- Delivered burgers --}}
 <div class="container">
     <div class="row">
@@ -17,7 +17,6 @@
         <div>
              {{#each burgers}}   
                 {{#unless this.devoured}}
-                    {{!-- <form class=“form-inline” action=“/{{this.id}}?_method=PUT” method=“POST”></form> --}}
                     <form class=“form-inline” action="/burgers/{{this.id}}?_method=PUT" method=“PUT”>
                     {{this.burger_name}}  - <button data-id="{{this.id}}" type="submit" class="eat">Eat it</button>
                     </form>
