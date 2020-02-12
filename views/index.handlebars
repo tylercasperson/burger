@@ -3,7 +3,7 @@
         <div class="offset-md-4 col-md-4">
             <br>
             <h1>Eat da Burger</h1>
-            <img src="/public/assets/img/burger.png" alt="burger">
+            <img src="../public/assets/img/burger.png" alt="burger">
         </div>
     </div>
 </div>
@@ -15,9 +15,11 @@
     <div class="row">
         
         <div>
-            {{#each burgers}}
-                {{#unless devoured}}
-                    <div>{{this.burger_name}}  - <button class="eat" data_id="{{this.id}}">Eat it</button></div>
+             {{#each burgers}}
+                {{#unless this.devoured}}
+                    <form class=“form-inline” action=“/{{this.id}}?_method=PUT” method=“POST”>
+                    {{this.burger_name}}  - <button type="submit" class="eat">Eat it</button>
+                    </form>
                 {{/unless}}
             {{/each}}
         </div>
