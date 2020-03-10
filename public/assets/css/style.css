@@ -14,3 +14,16 @@ body{
     padding-left: 100px;
     text-decoration: line-through;
 }
+
+.icon{
+    width: 30px;
+    padding-right: 10px;
+}
+
+.orders{
+    padding-bottom: 10px;
+}
+
+.eat{
+    margin-left: 10px;
+}
