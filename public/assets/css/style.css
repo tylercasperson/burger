@@ -7,7 +7,16 @@ body{
 }
 
 .trash{
-    margin-right: 200px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.delete{
+    margin-left: 10px;
+}
+
+.removeItem{
+    display: flex;
 }
 
 .allGone{
