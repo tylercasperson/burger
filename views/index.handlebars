@@ -1,9 +1,19 @@
 <div class="container logo">
     <div class="row">
-        <div class="offset-md-4 col-md-4">
+        <div class="col-md-4 logoRequest">
             <br>
             <h1>Eat da Burger</h1>
             <img src="/assets/img/burgerLogo.png" alt="burger" width="200px" class="burgerImg">
+
+            {{!-- Requested burger --}}
+            <form class="burgerForm" action="/api/burgers" method="POST">
+                <div class="request">
+                    <textarea class="burgerName" name="burger_name" placeholder="What would you like to eat?"></textarea>  
+                    <br>
+                    <button type="submit" class="btn btn-dark btn-lg addBurger">Add burger</button>
+                </div>
+            </form>
+
         </div>
     </div>
 </div>
@@ -11,45 +21,35 @@
 <br>
    
 {{!-- Delivered burgers --}}
-<div class="container">
-    <div class="row">
-        
-        <div class="orderUp">
-             {{#each burgers}}   
-                {{#unless this.devoured}}
-                    <div class="card-deck orders">
-                        <img src="/assets/img/burgerIcon.png" alt="2" class="icon">
-                        <form class=“form-inline” action="/burgers/{{this.id}}?_method=PUT" method=“PUT”>
-                        {{this.burger_name}}  - <button data-id="{{this.id}}" type="submit" class="btn btn-sm btn-dark eat">Eat it</button>
-                        </form>
-                    </div>
-                {{/unless}}
-            {{/each}}
-        </div>
-        
-{{!-- Requested burger --}}
-        <form class="burgerForm" action="/api/burgers" method="POST">
-            <div class="offset-md-2 col-md-12">
-                <textarea class="burgerName" name="burger_name" placeholder="What would you like to eat?"></textarea>  
-                <br>
-                <button type="submit" class="btn btn-dark btn-lg btn-block addBurger">Add burger</button>
-            </div>
-        </form>
+<div class="container orderUp">
+            {{#each burgers}}   
+            {{#unless this.devoured}}
+                <div class="card-deck orders">
+                    <img src="/assets/img/burgerIcon.png" alt="2" class="icon">
+                    <form class=“form-inline” action="/burgers/{{this.id}}?_method=PUT" method=“PUT”>
+                    {{this.burger_name}}  - <button data-id="{{this.id}}" type="submit" class="btn btn-sm btn-dark eat">Eat it</button>
+                    </form>
+                </div>
+            {{/unless}}
+        {{/each}}
+</div>
+
+
+
+
 
 {{!-- devoured burgers --}}
-        <div class="col-md-5 allDone">
-            {{#each burgers}}
-                {{#if devoured}}
-                <form class=“form-inline” action="/{{this.id}}?_method=DELETE" method=“POST”>
-                    <div class="removeItem">
-                        <div class="allGone">{{this.burger_name}}</div>
-                        <button data-id="{{this.id}}" type="submit" class="btn btn-dark btn-sm delete"><img src="/assets/img/trash.png" alt="trash" class="trash">Remove Item</button>
-                    </div>
-                </form>
-                {{/if}}
-            {{/each}}
-              
-        </div>
-        
+<div class="container trashArea">
+    <div class="card-deck allDone">
+        {{#each burgers}}
+            {{#if devoured}}
+            <form class=“form-inline” action="/{{this.id}}?_method=DELETE" method=“POST”>
+                <div class="removeItem">
+                    <div class="allGone">{{this.burger_name}}</div>
+                    <button data-id="{{this.id}}" type="submit" class="btn btn-dark btn-sm delete"><img src="/assets/img/trash.png" alt="trash" class="trash">Remove Item</button>
+                </div>
+            </form>
+            {{/if}}
+        {{/each}}    
     </div>
 </div>
