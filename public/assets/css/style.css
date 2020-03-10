@@ -1,3 +1,7 @@
 body{
     background-color:white;
+    background-image: linear-gradient(rgb(225,226,255), rgb(32,72,255));
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed;
 }
