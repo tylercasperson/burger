@@ -1,15 +1,20 @@
-# burger
+# Eat-da-burger
+
+### Here is the link to the live website: [Eat-da-burger](https://eatdaburger-yum.herokuapp.com)
 
 
+I was really excited to start SQL the bootcamp. I had been using SQL over the past 10 years. The exact configuration within the burger app took me a while to figure out all of the different places something should go. Once that was figured out, it was pretty easy to write raw sql. This burger app uses Get, Post, Put and Delete routes.
 
-Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+- - -
 
-Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+## What I was asked to accomplish:
+### Homework Overview
 
-Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+In this assignment, you'll create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.
 
-Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+- - -
 
-Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+#### Credit for the Images used goes to:
 
-Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+*   Icons Freepik at www.flaticon.com
+*   Image by Clker-Free-Vector-Images from Pixabay
