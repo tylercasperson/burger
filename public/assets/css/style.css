@@ -5,3 +5,12 @@ body{
     height: 100%;
     background-attachment: fixed;
 }
+
+.trash{
+    margin-right: 200px;
+}
+
+.allGone{
+    padding-left: 100px;
+    text-decoration: line-through;
+}

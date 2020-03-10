@@ -34,12 +34,14 @@
         </form>
 
 {{!-- devoured burgers --}}
-        <div class="offset-md-2 col-md-3">
+        <div class="offset-md-2 col-md-5">
             {{#each burgers}}
                 {{#if devoured}}
-                    <div text-decoration="line-through">{{this.burger_name}}</div>
+                    <div class="allGone">{{this.burger_name}}</div>
                 {{/if}}
             {{/each}}
+            <img src="/assets/img/trash.png" alt="trash" class="trash">  
         </div>
+        
     </div>
 </div>
