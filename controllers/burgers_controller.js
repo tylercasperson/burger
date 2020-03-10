@@ -29,4 +29,11 @@ router.put("/burgers/:id", function(request, res){
     });
 });
 
+router.delete("/api/burgers/:id", function(req, res){
+    var condition = req.params.id;
+    burgers.deleteOne(condition, function(){
+        res.status(202).end();
+    });
+});
+
 module.exports = router;

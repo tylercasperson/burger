@@ -40,7 +40,11 @@
         <div class="col-md-5 allDone">
             {{#each burgers}}
                 {{#if devoured}}
+                    <form class=“form-inline” action="/{{this.id}}?_method=DELETE" method=“POST”>
                     <div class="allGone">{{this.burger_name}}</div>
+                    
+                    <button data-id="{{this.id}}" type="submit" class="btn btn-danger btn-lg btn-block delete">Reset Data</button>
+                    </form>
                 {{/if}}
             {{/each}}
             <img src="/assets/img/trash.png" alt="trash" class="trash">  

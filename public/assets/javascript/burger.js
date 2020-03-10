@@ -2,8 +2,8 @@ $(function(){
 
     $(".eat").on("click", function(event){
         event.preventDefault();
-    var id = $(this).data("id");
-    console.log("tyler");
+        var id = $(this).data("id");
+        console.log($(this).data());
 
         $.ajax("/burgers/" + id, {
             type: "PUT",
@@ -24,4 +24,18 @@ $(function(){
             location.reload();
         });
     });
+
+    $(".delete").on("click", function(event){
+        event.preventDefault();
+        var id = $(this).data("id");
+        console.log(id);
+
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE"
+        }).then(function(){
+            console.log(id);
+            location.reload();
+        });
+
+    })
 });

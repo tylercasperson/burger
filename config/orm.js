@@ -24,6 +24,15 @@ var orm = {
             if (err) throw err;
             cb(res);
         });
+    },
+    deleteOne: function(condition, cb) {
+        console.log(condition);
+        var queryString = "DELETE FROM burgers WHERE id = " + condition + ";";
+        console.log(queryString);
+        connection.query(queryString, function(err, res) {
+            if (err) throw err;
+            cb(res);
+        });
     }
 };
 
