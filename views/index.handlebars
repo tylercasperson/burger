@@ -28,16 +28,16 @@
         </div>
         
 {{!-- Requested burger --}}
-        <form action="/api/burgers" method="POST">
-        <div class="offset-md-2 col-md-3">
-            <textarea id-="burgerName" name="burger_name" cols="20" rows="3"></textarea>  
-            <br>
-            <button type="submit" class="addBurger">Add burger</button>
-        </div>
+        <form class="burgerForm" action="/api/burgers" method="POST">
+            <div class="offset-md-2 col-md-12">
+                <textarea class="burgerName" name="burger_name" placeholder="What would you like to eat?"></textarea>  
+                <br>
+                <button type="submit" class="btn btn-dark btn-lg btn-block addBurger">Add burger</button>
+            </div>
         </form>
 
 {{!-- devoured burgers --}}
-        <div class="offset-md-2 col-md-5">
+        <div class="col-md-5 allDone">
             {{#each burgers}}
                 {{#if devoured}}
                     <div class="allGone">{{this.burger_name}}</div>

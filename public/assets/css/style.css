@@ -27,3 +27,15 @@ body{
 .eat{
     margin-left: 10px;
 }
+
+.burgerForm{
+    margin-left: 110px;
+}
+
+.burgerName{
+    width: 200px;
+}
+
+.allDone{
+    margin-left: 60px;
+}
