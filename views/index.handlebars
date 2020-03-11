@@ -1,6 +1,21 @@
-<div class="container logo">
-    <div class="row">
-        <div class="col-md-4 logoRequest">
+   
+{{!-- Delivered burgers --}}
+<div class="col-md-4 orderUp">
+            {{#each burgers}}   
+            {{#unless this.devoured}}
+                <div class="card-deck orders">
+                    <img src="/assets/img/burgerIcon.png" alt="2" class="icon">
+                    <form class=“form-inline” action="/burgers/{{this.id}}?_method=PUT" method=“PUT”>
+                    {{this.burger_name}}  - <button data-id="{{this.id}}" type="submit" class="btn btn-sm btn-dark eat">Eat it</button>
+                    </form>
+                </div>
+            {{/unless}}
+        {{/each}}
+</div>
+
+
+<div class="logo col-md-4">
+        <div class="logoRequest">
             <br>
             <h1>Eat da Burger</h1>
             <img src="/assets/img/burgerLogo.png" alt="burger" width="200px" class="burgerImg">
@@ -15,38 +30,19 @@
             </form>
 
         </div>
-    </div>
 </div>
 <br>
 <br>
-   
-{{!-- Delivered burgers --}}
-<div class="container orderUp">
-            {{#each burgers}}   
-            {{#unless this.devoured}}
-                <div class="card-deck orders">
-                    <img src="/assets/img/burgerIcon.png" alt="2" class="icon">
-                    <form class=“form-inline” action="/burgers/{{this.id}}?_method=PUT" method=“PUT”>
-                    {{this.burger_name}}  - <button data-id="{{this.id}}" type="submit" class="btn btn-sm btn-dark eat">Eat it</button>
-                    </form>
-                </div>
-            {{/unless}}
-        {{/each}}
-</div>
-
-
-
-
 
 {{!-- devoured burgers --}}
-<div class="container trashArea">
+<div class="col-md-4 trashArea">
     <div class="card-deck allDone">
         {{#each burgers}}
             {{#if devoured}}
             <form class=“form-inline” action="/{{this.id}}?_method=DELETE" method=“POST”>
                 <div class="removeItem">
                     <div class="allGone">{{this.burger_name}}</div>
-                    <button data-id="{{this.id}}" type="submit" class="btn btn-dark btn-sm delete"><img src="/assets/img/trash.png" alt="trash" class="trash">Remove Item</button>
+                    <button data-id="{{this.id}}" type="submit" class="btn btn-dark btn-sm delete"><img src="/assets/img/trash.png" alt="trash" class="trash">Toss</button>
                 </div>
             </form>
             {{/if}}
