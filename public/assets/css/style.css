@@ -1,69 +1,74 @@
-body{
-    background-color:white;
-    background-image: linear-gradient(rgb(225,226,255), rgb(32,72,255));
-    background-repeat: no-repeat;
-    height: 100%;
-    background-attachment: fixed;
+body {
+  background-color: white;
+  background-image: linear-gradient(rgb(225, 226, 255), rgb(32, 72, 255));
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
 }
 
-.logoRequest{
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.logoRequest {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.request{
-    padding-top: 50px;
-    display: flexbox;
+.request {
+  padding-top: 50px;
+  display: flexbox;
 }
 
-.orderUp{
-    display: flexbox;
-    margin-top: 400px;
+.orderUp {
+  display: flexbox;
+  margin-top: 400px;
 }
 
-.trashArea{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 400px;
+.trashArea {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 400px;
 }
 
-.trash{
-    height: 20px;
-    margin-right: 10px;
+.trash {
+  height: 20px;
+  margin-right: 10px;
 }
 
-.delete{
-    margin-left: 10px;
+.delete {
+  margin-left: 10px;
 }
 
-.removeItem{
-    display: flex;
+.removeItem {
+  display: flex;
 }
 
-.allGone{
-    padding-left: 100px;
-    text-decoration: line-through;
+.allGone {
+  padding-left: 100px;
+  text-decoration: line-through;
 }
 
-.icon{
-    width: 30px;
-    padding-right: 10px;
+.icon {
+  width: 30px;
+  padding-right: 10px;
 }
 
-.orders{
-    padding-bottom: 10px;
+.orders {
+  padding-bottom: 10px;
 }
 
-.eat{
-    margin-left: 10px;
+.eat {
+  margin-left: 10px;
 }
 
-.burgerName, .addBurger{
-    width: 200px;
+.burgerName,
+.reset,
+.addBurger {
+  width: 200px;
 }
 
-.allDone{
-    margin-left: 60px;
+.allDone {
+  margin-left: 60px;
+}
+.reset {
+  margin-top: 10px;
 }
