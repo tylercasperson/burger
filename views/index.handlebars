@@ -13,13 +13,19 @@
     {{/each}}
 </div>
 
-
 <div class="logo col-md-4">
     <div class="logoRequest">
         <br>
         <h1>Eat da Burger</h1>
         <img src="/assets/img/burgerLogo.png" alt="burger" width="200px" class="burgerImg">
-
+        <p>Welcome</p>
+        <div> Enter the name of the item you would like eat. Press the add burger button to place the order. When you
+            see it on the
+            left. Click eat it. When you
+            are ready, on the right, click toss it to remove the item from the screen.</div>
+        <br>
+        <div>Reset to original will remove all items and place three items on the screen. Someday, I hope to visit the
+            restaurant that serves these burgers.</div>
         {{!-- Requested burger --}}
         <form class="burgerForm" action="/api/burgers" method="POST">
             <div class="request">
