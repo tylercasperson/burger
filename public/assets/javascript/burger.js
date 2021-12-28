@@ -2,13 +2,11 @@ $(function () {
   $('.eat').on('click', function (event) {
     event.preventDefault();
     var id = $(this).data('id');
-    console.log($(this).data());
 
     $.ajax('/burgers/' + id, {
       type: 'PUT',
       data: true,
     }).then(function () {
-      console.log(id);
       location.reload();
     });
   });
@@ -27,12 +25,10 @@ $(function () {
   $('.delete').on('click', function (event) {
     event.preventDefault();
     var id = $(this).data('id');
-    console.log(id);
 
     $.ajax('/api/burgers/' + id, {
       type: 'DELETE',
     }).then(function () {
-      console.log(id);
       location.reload();
     });
   });
@@ -45,7 +41,6 @@ $(function () {
       data: true,
     }).then(function () {
       location.reload();
-      console.log('reset');
     });
 
     $.ajax('/api/burgers', {

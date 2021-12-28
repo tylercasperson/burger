@@ -17,22 +17,18 @@ var burgers = {
     });
   },
   deleteOne: function (id, cb) {
-    console.log(id);
     orm.deleteOne(id, function (res) {
       cb(res);
-      console.log(res);
     });
   },
   deleteAll: function (cb) {
     orm.deleteAll(function (res) {
       cb(res);
-      console.log(res);
     });
   },
   insertOriginal: function (cb) {
     orm.insertOriginal(function (res) {
       cb(res);
-      console.log(res);
     });
   },
 };

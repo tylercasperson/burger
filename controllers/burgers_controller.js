@@ -26,7 +26,6 @@ router.post('/api/burgers', function (req, res) {
 router.put('/burgers/:id', function (request, res) {
   var condition = 'id = ' + request.params.id;
   burgers.updateOne(condition, function (result) {
-    console.log(result);
     res.sendStatus(200);
   });
 });
@@ -40,14 +39,12 @@ router.delete('/api/burgers/:id', function (req, res) {
 
 router.put('/api/burgers', function (req, res) {
   burgers.reset(function (result) {
-    console.log(result);
     res.sendStatus(200);
   });
 });
 
 router.delete('/api/burgers', function (req, res) {
   burgers.deleteAll(function (result) {
-    console.log(result);
     res.sendStatus(200);
   });
 });
